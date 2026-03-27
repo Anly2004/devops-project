@@ -18,6 +18,10 @@
           - docker
           - python3-pip
         state: present
+    - name: Install Git
+      dnf:
+        name: git
+        state: present
 
     - name: Start Docker service
       service:
