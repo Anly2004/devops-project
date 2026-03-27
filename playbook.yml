@@ -18,11 +18,7 @@
           - docker
           - python3-pip
         state: present
-    - name: Install Git
-      dnf:
-        name: git
-        state: present
-
+    
     - name: Start Docker service
       service:
         name: docker
@@ -40,21 +36,11 @@
         name: docker
         executable: pip3
         extra_args: --ignore-installed
-    - name: Pull project from GitHub
-      git:
-        repo: https://github.com/Anly2004/devops-project.git
-        dest: /home/ec2-user/devops-project
 
-    - name: Build Docker image
-      command: docker build -t mywebapp /home/ec2-user/devops-project
-
-    - name: Stop old container
-      command: docker stop mycontainer
-      ignore_errors: yes
-
-    - name: Remove old container
-      command: docker rm mycontainer
-      ignore_errors: yes
-
-    - name: Run new container
-      command: docker run -d -p 80:80 --name mycontainer mywebapp 
+    - name: Run nginx container
+      docker_container:
+        name: nginx
+        image: nginx
+        state: started
+        ports:
+          - "80:80"
