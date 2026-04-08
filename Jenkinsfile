@@ -16,7 +16,11 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8081:80 devops-project'
+		sh '''
+                docker stop mycontainer || true
+	        docker rm mycontainer || true
+                docker run -d -p 8081:80 --name mycontainer devops-project
+                '''           
             }
         }
     }
