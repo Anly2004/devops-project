@@ -1,15 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My DevOps App</title>
+    <title>Animal World - DevOps Project</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        .card p {
+            padding: 0 15px 15px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 8px 15px;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ff3b2e;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Hello from Anly's DevOps Project 🚀</h1>
-<<<<<<< HEAD
-    <h1>Updated fron Jenkins</h1>
-=======
-    <h1>Updated from Jenkins</h1>
->>>>>>> 6eb6158 (trigger pipeline)
-    <p>This app is deployed using Docker</p>
+
+<header>
+    <h1>🐾 Welcome to Animal World</h1>
+    <p>DevOps Project by Anly 🚀</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://source.unsplash.com/250x180/?lion">
+        <h3>Lion</h3>
+        <p>The king of the jungle 🦁</p>
+        <button class="btn" onclick="showAlert('Lion')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/250x180/?elephant">
+        <h3>Elephant</h3>
+        <p>Largest land animal 🐘</p>
+        <button class="btn" onclick="showAlert('Elephant')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/250x180/?tiger">
+        <h3>Tiger</h3>
+        <p>Powerful and striped 🐯</p>
+        <button class="btn" onclick="showAlert('Tiger')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/250x180/?dog">
+        <h3>Dog</h3>
+        <p>Man's best friend 🐶</p>
+        <button class="btn" onclick="showAlert('Dog')">Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/250x180/?cat">
+        <h3>Cat</h3>
+        <p>Cute and playful 🐱</p>
+        <button class="btn" onclick="showAlert('Cat')">Learn More</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Animal World | Deployed with Docker & Jenkins</p>
+</footer>
+
+<script>
+    function showAlert(animal) {
+        alert("You clicked on " + animal + " 🐾");
+    }
+</script>
+
 </body>
 </html>
