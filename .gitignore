@@ -1,3 +1,4 @@
 main.tf
 *.pem
 *.save
+wget-log
