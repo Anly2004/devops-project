@@ -37,10 +37,10 @@
         executable: pip3
         extra_args: --ignore-installed
 
-    - name: Run nginx container
-      docker_container:
-        name: nginx
-        image: nginx
+    - name: Run DevOps project container
+      docker_container  :
+        name: mycontainer
+        image: devops-project
         state: started
         ports:
           - "80:80"
